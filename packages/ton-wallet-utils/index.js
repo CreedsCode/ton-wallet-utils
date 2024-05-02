@@ -37,8 +37,9 @@ import { refreshGetgemsMetadata } from "./_modules/refreshGetgemsMetadata.js";
 import { whoIsAddress } from "./_modules/whoIsAddress.js";
 import { getCollection } from "./_modules/getCollection.js";
 import { getNonBouncable } from "./_modules/getNonBouncable.js";
-
+import { TONBlockchainExplorerAPI } from "./_modules/TONBlockchainExplorerAPI.js";
 export {
+  TONBlockchainExplorerAPI,
   config,
   activateWallet,
   createWallet,
