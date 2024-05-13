@@ -29,6 +29,8 @@ export async function transferJettonFromHighload({
 
   const { wallet, address, secretKey } = await loadHighloadWallet({ seed });
 
+  console.log("Address from mnemonic: ", address)
+
   const transactions = [];
 
   for (const transfer of transfers) {

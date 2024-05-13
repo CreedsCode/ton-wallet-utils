@@ -1,11 +1,15 @@
 {
-  "name": "ton-wallet-utils",
-  "version": "2.79.0",
+  "name": "@birdlabs/ton-wallet-utils",
+  "version": "0.0.1",
   "description": "@tg09F9 package for TON, with some helpfull utils for wallet based on @TrueCarry liteserver",
   "type": "module",
   "scripts": {
     "dev": "node test/example.js",
-    "postinstall": "node private/patch.js"
+    "postinstall": "node private/patch.js",
+    "build": "tsup index.js --format cjs,esm --dts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
   },
   "repository": {
     "type": "git",
@@ -16,10 +20,10 @@
   "author": "@tg09F9",
   "license": "ISC",
   "dependencies": {
+    "@ton/ton": "^13.11.1",
     "fs-extra": "^10.1.0",
     "graphql-request": "^5.0.0",
     "node-fetch": "^3.3.0",
-    "@ton/ton": "^13.11.1",
     "ton-crypto": "^3.2.0",
     "ton-lite-client": "^3.0.0",
     "ton3-contracts": "^0.0.18",
@@ -27,5 +31,8 @@
     "tonweb": "^0.0.66",
     "tonweb-mnemonic": "^1.0.1",
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2"
   }
 }
