@@ -2,6 +2,7 @@
   "name": "ton-wallet-utils",
   "private": false,
   "scripts": {
+    "publish": "turbo build && turbo publish",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
