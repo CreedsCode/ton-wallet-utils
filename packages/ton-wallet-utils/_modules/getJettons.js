@@ -7,7 +7,9 @@ export async function getJettons({ address, ton_api_key = TON_API_KEY }) {
 
   const options = {
     method: "GET",
-    headers: new Headers({ Authorization: `Bearer ${ton_api_key}` }),
+    headers: {
+      Authorization: `Bearer ${ton_api_key}`,
+    },
   };
 
   try {

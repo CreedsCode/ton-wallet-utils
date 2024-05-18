@@ -24,7 +24,9 @@ export async function getJettonWalletAddress({
   const url = `https://tonapi.io/v2/accounts/${rawAddress}/jettons`;
   const options = {
     method: "GET",
-    headers: new Headers({ Authorization: `Bearer ${ton_api_key}` }),
+    headers: {
+      Authorization: `Bearer ${ton_api_key}`,
+    },
   };
 
   try {

@@ -13,7 +13,9 @@ export async function getNfts({ address, ton_api_key = TON_API_KEY }) {
   const url = `https://tonapi.io/v2/accounts/${rawAddress}/nfts`;
   const options = {
     method: "GET",
-    headers: new Headers({ Authorization: `Bearer ${ton_api_key}` }),
+    headers: {
+      Authorization: `Bearer ${ton_api_key}`,
+    },
   };
 
   try {
