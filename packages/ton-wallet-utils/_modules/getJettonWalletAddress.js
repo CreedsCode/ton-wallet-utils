@@ -35,7 +35,7 @@ export async function getJettonWalletAddress({
 
     if (responseJSON?.balances) {
       for (const tokenBalance of responseJSON.balances) {
-        if (tokenBalance.jetton_address === rawJettonAddress) {
+        if (tokenBalance?.jetton?.address === rawJettonAddress) {
           return toFriendlyAddress(tokenBalance.wallet_address.address);
         }
       }
